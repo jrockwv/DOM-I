@@ -40,3 +40,94 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+
+
+const navBar = document.getElementsByTagName("a")
+// Array.from(navBar).forEach(element => {
+//   element.textContent = "service"
+// });
+navBar[0].textContent = siteContent["nav"]["nav-item-1"]
+navBar[1].textContent = siteContent["nav"]["nav-item-2"]
+navBar[2].textContent = siteContent["nav"]["nav-item-3"]
+navBar[3].textContent = siteContent["nav"]["nav-item-4"]
+navBar[4].textContent = siteContent["nav"]["nav-item-5"]
+navBar[5].textContent = siteContent["nav"]["nav-item-6"]
+navBar[0].style.color = 'green'
+navBar[1].style.color = 'green'
+navBar[2].style.color = 'green'
+navBar[3].style.color = 'green'
+navBar[4].style.color = 'green'
+navBar[5].style.color = 'green'
+
+
+
+const headImg = document.getElementById("cta-img")
+headImg.setAttribute('src', siteContent["cta"]["img-src"])
+
+
+
+const h1Text = document.getElementsByTagName('h1')
+Array.from(h1Text).forEach(element => {
+  element.textContent = "DOM IS AWESOME"
+})
+// h1Text[0].textContent = siteContent["cta"]["h1"] AN EASIER WAY TO DO IT
+
+
+const ctaText = document.getElementsByTagName("button")
+Array.from(ctaText).forEach(element => {
+    element.textContent = "Get Started"
+  });
+  // ctaText[0].textContent = siteContent["cta"]["button"] AN EASY WAY TO DO IT! 
+
+const mainContentH = document.getElementsByTagName('h4')
+mainContentH[0].textContent = siteContent["main-content"]["features-h4"]
+mainContentH[1].textContent = siteContent["main-content"]["about-h4"]
+mainContentH[2].textContent = siteContent["main-content"]["services-h4"]
+mainContentH[3].textContent = siteContent["main-content"]["product-h4"]
+mainContentH[4].textContent = siteContent["main-content"]["vision-h4"]
+
+
+
+const mainContentP = document.getElementsByTagName('P')
+mainContentP[0].textContent = siteContent["main-content"]["features-content"]
+mainContentP[1].textContent = siteContent["main-content"]["about-content"]
+mainContentP[2].textContent = siteContent["main-content"]["services-content"]
+mainContentP[3].textContent = siteContent["main-content"]["product-content"]
+mainContentP[4].textContent = siteContent["main-content"]["vision-content"]
+
+
+
+let midImg = document.getElementById("middle-img");
+midImg.setAttribute('src', siteContent["main-content"]["middle-img-src"])
+
+
+
+const contactsH = document.getElementsByTagName('h4')
+contactsH[5].textContent = siteContent["contact"]["contact-h4"]
+
+const contactsP = document.getElementsByTagName('p')
+contactsP[5].textContent = siteContent["contact"]["address"]
+contactsP[6].textContent = siteContent["contact"]["phone"]
+contactsP[7].textContent = siteContent["contact"]["email"]
+
+
+
+const copy = document.getElementsByTagName('p')
+copy[8].textContent = siteContent["footer"]["copyright"]
+
+
+
+const newNav = document.createElement('a')
+newNav.textContent = "Home"
+newNav.style.color = 'green'
+
+const parentElement = document.querySelector("nav")
+parentElement.prepend(newNav)
+
+const newNav2 = document.createElement('a')
+newNav2.textContent = "Email"
+newNav2.style.color = 'green'
+
+const parentElement2 = document.querySelector("nav")
+parentElement.appendChild(newNav2)
